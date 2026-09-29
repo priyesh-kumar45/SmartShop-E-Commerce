@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="SmartShop - Modern responsive e-commerce website built with HTML, CSS and JavaScript"
+  >
+
+  <meta name="theme-color" content="#ff4d6d">
+
+  <title>SmartShop | Modern E-Commerce Store</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       TOAST
+  ========================== -->
+
+  <div id="toastContainer" class="toast-container"></div>
+
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header class="header">
+
+    <a href="#home" class="logo">
+      <i class="fa-solid fa-bag-shopping"></i>
+      Smart<span>Shop</span>
+    </a>
+
+    <nav class="nav" id="nav">
+
+      <a href="#home">Home</a>
+
+      <a href="#products">Products</a>
+
+      <a href="#categories">Categories</a>
+
+      <a href="#deals">Deals</a>
+
+      <a href="#about">About</a>
+
+    </nav>
+
+    <div class="header-actions">
+
+      <button
+        class="icon-btn"
+        id="themeBtn"
+        aria-label="Toggle dark mode"
+      >
+        <i class="fa-solid fa-moon"></i>
+      </button>
+
+      <button
+        class="icon-btn"
+        id="wishlistBtn"
+        aria-label="Open wishlist"
+      >
+        <i class="fa-regular fa-heart"></i>
+        <b id="wishlistCount">0</b>
+      </button>
+
+      <button
+        class="icon-btn"
+        id="cartBtn"
+        aria-label="Open shopping cart"
+      >
+        <i class="fa-solid fa-cart-shopping"></i>
+        <b id="cartCount">0</b>
+      </button>
+
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+
+        <span class="eyebrow">
+          NEW COLLECTION • 2026
+        </span>
+
+        <h1>
+          Shop smarter.
+          <br>
+          <span>Live better.</span>
+        </h1>
+
+        <p>
+          Discover quality products, exclusive deals and a smooth
+          shopping experience built with modern web technologies.
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            href="#products"
+            class="primary-btn"
+          >
+            Explore Products
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a
+            href="#deals"
+            class="secondary-btn"
+          >
+            View Deals
+          </a>
+
+        </div>
+
+        <div class="hero-stats">
+
+          <div>
+            <strong>10K+</strong>
+            <span>Happy Customers</span>
+          </div>
+
+          <div>
+            <strong>500+</strong>
+            <span>Products</span>
+          </div>
+
+          <div>
+            <strong>4.9/5</strong>
+            <span>Average Rating</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-visual">
+
+        <div class="hero-card card-back"></div>
+
+        <div class="hero-card main-card">
+
+          <div class="sale-badge">
+            30% OFF
+          </div>
+
+          <img
+            src="images/headphones.jpg"
+            alt="Wireless Headphones"
+          >
+
+          <div class="hero-product-info">
+
+            <span>Trending Now</span>
+
+            <strong>
+              Wireless Headphones
+            </strong>
+
+            <b>₹2,499</b>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CATEGORIES
+    ========================== -->
+
+    <section
+      class="categories-section"
+      id="categories"
+    >
+
+      <div class="section-head center">
+
+        <span class="eyebrow">
+          BROWSE STORE
+        </span>
+
+        <h2>
+          Shop by category
+        </h2>
+
+        <p>
+          Find what you need quickly with smart category filters.
+        </p>
+
+      </div>
+
+
+      <div class="category-grid">
+
+        <button
+          class="category-tile active"
+          data-category="All"
+        >
+          <i class="fa-solid fa-border-all"></i>
+          <span>All Products</span>
+        </button>
+
+
+        <button
+          class="category-tile"
+          data-category="Electronics"
+        >
+          <i class="fa-solid fa-laptop"></i>
+          <span>Electronics</span>
+        </button>
+
+
+        <button
+          class="category-tile"
+          data-category="Accessories"
+        >
+          <i class="fa-solid fa-watch"></i>
+          <span>Accessories</span>
+        </button>
+
+
+        <button
+          class="category-tile"
+          data-category="Shoes"
+        >
+          <i class="fa-solid fa-shoe-prints"></i>
+          <span>Shoes</span>
+        </button>
+
+
+        <button
+          class="category-tile"
+          data-category="Fashion"
+        >
+          <i class="fa-solid fa-shirt"></i>
+          <span>Fashion</span>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTS
+    ========================== -->
+
+    <section
+      class="products-section"
+      id="products"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="eyebrow">
+            OUR STORE
+          </span>
+
+          <h2>
+            Popular Products
+          </h2>
+
+          <p id="resultText">
+            Showing all products
+          </p>
+
+        </div>
+
+
+        <div class="toolbar">
+
+          <label class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Search products..."
+              autocomplete="off"
+            >
+
+          </label>
+
+
+          <select id="sortSelect">
+
+            <option value="featured">
+              Sort: Featured
+            </option>
+
+            <option value="low">
+              Price: Low to High
+            </option>
+
+            <option value="high">
+              Price: High to Low
+            </option>
+
+            <option value="rating">
+              Top Rated
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="products-grid"
+        id="productsContainer"
+      ></div>
+
+
+      <div
+        class="empty-state hidden"
+        id="emptyState"
+      >
+
+        <i class="fa-solid fa-box-open"></i>
+
+        <h3>
+          No products found
+        </h3>
+
+        <p>
+          Try another search or category.
+        </p>
+
+        <button
+          class="primary-btn"
+          id="resetFilters"
+        >
+          Reset Filters
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         DEAL
+    ========================== -->
+
+    <section
+      class="deal-section"
+      id="deals"
+    >
+
+      <div>
+
+        <span class="eyebrow">
+          LIMITED TIME
+        </span>
+
+        <h2>
+          Big savings are waiting.
+        </h2>
+
+        <p>
+          Use code
+          <strong>SMART10</strong>
+          to get 10% off your order.
+        </p>
+
+      </div>
+
+
+      <div class="deal-timer">
+
+        <span>
+          OFFER ENDS IN
+        </span>
+
+        <strong id="countdown">
+          12:00:00
+        </strong>
+
+      </div>
+
+
+      <button
+        class="primary-btn"
+        id="copyCoupon"
+      >
+        <i class="fa-regular fa-copy"></i>
+        Copy Coupon
+      </button>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURES
+    ========================== -->
+
+    <section class="features">
+
+      <div class="feature">
+
+        <i class="fa-solid fa-truck-fast"></i>
+
+        <div>
+          <h3>Free Delivery</h3>
+          <p>On orders above ₹999</p>
+        </div>
+
+      </div>
+
+
+      <div class="feature">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        <div>
+          <h3>Secure Payment</h3>
+          <p>Protected checkout</p>
+        </div>
+
+      </div>
+
+
+      <div class="feature">
+
+        <i class="fa-solid fa-rotate-left"></i>
+
+        <div>
+          <h3>Easy Returns</h3>
+          <p>7 day return policy</p>
+        </div>
+
+      </div>
+
+
+      <div class="feature">
+
+        <i class="fa-solid fa-headset"></i>
+
+        <div>
+          <h3>24/7 Support</h3>
+          <p>Always here to help</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section
+      class="about"
+      id="about"
+    >
+
+      <div class="about-icon">
+
+        <i class="fa-solid fa-code"></i>
+
+      </div>
+
+
+      <div>
+
+        <span class="eyebrow">
+          ABOUT PROJECT
+        </span>
+
+        <h2>
+          Built for a strong front-end portfolio.
+        </h2>
+
+        <p>
+          SmartShop demonstrates responsive design,
+          product filtering, search, sorting, wishlist,
+          cart management, localStorage, dark mode,
+          coupon logic and a complete checkout flow
+          using HTML, CSS and JavaScript.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="footer-logo">
+      Smart<span>Shop</span>
+    </div>
+
+    <p>
+      Modern e-commerce experience built with
+      HTML, CSS and JavaScript.
+    </p>
+
+    <div class="socials">
+
+      <a
+        href="https://github.com/priyesh-kumar45"
+        target="_blank"
+        aria-label="GitHub"
+      >
+        <i class="fa-brands fa-github"></i>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/priyesh-kumar-a1404b27a/"
+        target="_blank"
+        aria-label="LinkedIn"
+      >
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+
+      <a
+        href="#"
+        aria-label="Instagram"
+      >
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+    </div>
+
+    <small>
+      © 2026 SmartShop. All Rights Reserved.
+    </small>
+
+  </footer>
+
+
+  <!-- =========================
+       OVERLAY
+  ========================== -->
+
+  <div
+    class="overlay"
+    id="overlay"
+  ></div>
+
+
+  <!-- =========================
+       CART DRAWER
+  ========================== -->
+
+  <aside
+    class="drawer"
+    id="cartDrawer"
+  >
+
+    <div class="drawer-head">
+
+      <div>
+
+        <span class="eyebrow">
+          YOUR BAG
+        </span>
+
+        <h2>
+          Shopping Cart
+        </h2>
+
+      </div>
+
+      <button
+        class="close-btn"
+        data-close="cartDrawer"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+    </div>
+
+
+    <div
+      class="drawer-body"
+      id="cartItems"
+    ></div>
+
+
+    <div class="drawer-footer">
+
+      <div class="coupon-row">
+
+        <input
+          id="couponInput"
+          type="text"
+          placeholder="Coupon code"
+        >
+
+        <button id="applyCoupon">
+          Apply
+        </button>
+
+      </div>
+
+
+      <div class="summary">
+
+        <span>
+          Subtotal
+        </span>
+
+        <strong id="subtotal">
+          ₹0
+        </strong>
+
+      </div>
+
+
+      <div class="summary discount-line">
+
+        <span>
+          Discount
+        </span>
+
+        <strong id="discount">
+          - ₹0
+        </strong>
+
+      </div>
+
+
+      <div class="summary total">
+
+        <span>
+          Total
+        </span>
+
+        <strong id="total">
+          ₹0
+        </strong>
+
+      </div>
+
+
+      <button
+        class="primary-btn full"
+        id="checkoutBtn"
+      >
+        Proceed to Checkout
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- =========================
+       WISHLIST DRAWER
+  ========================== -->
+
+  <aside
+    class="drawer wishlist-drawer"
+    id="wishlistDrawer"
+  >
+
+    <div class="drawer-head">
+
+      <div>
+
+        <span class="eyebrow">
+          SAVED ITEMS
+        </span>
+
+        <h2>
+          Wishlist
+        </h2>
+
+      </div>
+
+      <button
+        class="close-btn"
+        data-close="wishlistDrawer"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+    </div>
+
+
+    <div
+      class="drawer-body"
+      id="wishlistItems"
+    ></div>
+
+  </aside>
+
+
+  <!-- =========================
+       PRODUCT MODAL
+  ========================== -->
+
+  <div
+    class="modal"
+    id="productModal"
+  >
+
+    <div class="modal-card">
+
+      <button class="close-btn modal-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div id="productModalContent"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       CHECKOUT MODAL
+  ========================== -->
+
+  <div
+    class="modal"
+    id="checkoutModal"
+  >
+
+    <div class="modal-card checkout-card">
+
+      <button class="close-btn modal-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <span class="eyebrow">
+        SECURE CHECKOUT
+      </span>
+
+      <h2>
+        Complete your order
+      </h2>
+
+
+      <form id="checkoutForm">
+
+        <div class="form-grid">
+
+          <input
+            required
+            type="text"
+            placeholder="Full name"
+          >
+
+          <input
+            required
+            type="email"
+            placeholder="Email address"
+          >
+
+        </div>
+
+
+        <input
+          required
+          type="text"
+          placeholder="Delivery address"
+        >
+
+
+        <div class="form-grid">
+
+          <input
+            required
+            type="text"
+            placeholder="City"
+          >
+
+          <input
+            required
+            type="text"
+            inputmode="numeric"
+            pattern="[0-9]{6}"
+            maxlength="6"
+            placeholder="PIN code"
+          >
+
+        </div>
+
+
+        <select required>
+
+          <option value="">
+            Payment method
+          </option>
+
+          <option value="cod">
+            Cash on Delivery
+          </option>
+
+          <option value="upi">
+            UPI
+          </option>
+
+          <option value="card">
+            Card
+          </option>
+
+        </select>
+
+
+        <button
+          class="primary-btn full"
+          type="submit"
+        >
+          <i class="fa-solid fa-lock"></i>
+          Place Order
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       BACK TO TOP
+  ========================== -->
+
+  <button
+    class="top-btn"
+    id="topBtn"
+    aria-label="Back to top"
+  >
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
